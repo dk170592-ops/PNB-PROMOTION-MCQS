@@ -117,24 +117,35 @@ function page(id) {
 }
 
 function home() {
-  
-  document.getElementById('qCount').textContent = qs.length;
-  document.getElementById('totalMcq').textContent = qs.length;
+
+  // Always use all questions to display topics
+  document.getElementById('qCount').textContent = seed.length;
+  document.getElementById('totalMcq').textContent = seed.length;
   document.getElementById('attempted').textContent = localStorage.getItem('attempted') || 0;
   document.getElementById('latestScore').textContent = localStorage.getItem('latestScore') || 'Not attempted';
 
-  let cats = [...new Set(qs.map(q => q.category))];
+  // Get separate categories
+  let cats = [...new Set(seed.map(q => q.category))];
+
+  // Create a separate topic card for every scheme
   document.getElementById('topics').innerHTML = cats.map(c =>
-    `<div class="topic" onclick="topicQuiz('${c}')"><b>${c}</b><small>${qs.filter(q => q.category === c).length} MCQs</small></div>`
+    `<div class="topic" onclick="topicQuiz('${c}')">
+      <b>${c}</b>
+      <small>${seed.filter(q => q.category === c).length} MCQs</small>
+    </div>`
   ).join('');
 
-  document.getElementById('latest').innerHTML = qs.slice(-5).reverse().map(q =>
-    `<div class="mcq"><span class="tag">${q.category}</span><h3>${q.question}</h3></div>`
+  document.getElementById('latest').innerHTML = seed.slice(-5).reverse().map(q =>
+    `<div class="mcq">
+      <span class="tag">${q.category}</span>
+      <h3>${q.question}</h3>
+    </div>`
   ).join('');
 }
 
 function topicQuiz(c) {
-  quiz = qs.filter(q => q.category === c);
+  // Select questions only from the clicked scheme
+  quiz = seed.filter(q => q.category === c);
   begin();
 }
 

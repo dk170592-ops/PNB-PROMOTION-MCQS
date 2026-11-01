@@ -818,7 +818,19 @@ const forexMCQs = [
   }
 ];
 
+// Combine all MCQs
 let qs = [...seed, ...forexMCQs];
+
+// Combine all Forex categories into one topic
+qs = qs.map(q => {
+  if (forexMCQs.includes(q)) {
+    return {
+      ...q,
+      category: "Foreign Exchange"
+    };
+  }
+  return q;
+});
 let quiz = [], pos = 0, score = 0, answered = false;
 
 function page(id) {
@@ -829,15 +841,17 @@ function page(id) {
 
 function home() {
 
-  // Display ALL questions
+  // Total MCQs
   document.getElementById('qCount').textContent = qs.length;
   document.getElementById('totalMcq').textContent = qs.length;
+
   document.getElementById('attempted').textContent =
     localStorage.getItem('attempted') || 0;
+
   document.getElementById('latestScore').textContent =
     localStorage.getItem('latestScore') || 'Not attempted';
 
-  // Get categories from ALL questions
+  // Get categories
   let cats = [...new Set(qs.map(q => q.category))];
 
   // Create topic cards
@@ -848,15 +862,15 @@ function home() {
     </div>`
   ).join('');
 
-  // Latest questions from all MCQs
-  document.getElementById('latest').innerHTML = qs.slice(-5).reverse().map(q =>
-    `<div class="mcq">
-      <span class="tag">${q.category}</span>
-      <h3>${q.question}</h3>
-    </div>`
-  ).join('');
+  // Latest MCQs
+  document.getElementById('latest').innerHTML =
+    qs.slice(-5).reverse().map(q =>
+      `<div class="mcq">
+        <span class="tag">${q.category}</span>
+        <h3>${q.question}</h3>
+      </div>`
+    ).join('');
 }
-
 function topicQuiz(c) {
   quiz = qs.filter(q => q.category === c);
   begin();

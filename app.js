@@ -829,24 +829,27 @@ function page(id) {
 
 function home() {
 
-  // Always use all questions to display topics
-  document.getElementById('qCount').textContent = seed.length;
-  document.getElementById('totalMcq').textContent = seed.length;
-  document.getElementById('attempted').textContent = localStorage.getItem('attempted') || 0;
-  document.getElementById('latestScore').textContent = localStorage.getItem('latestScore') || 'Not attempted';
+  // Display ALL questions
+  document.getElementById('qCount').textContent = qs.length;
+  document.getElementById('totalMcq').textContent = qs.length;
+  document.getElementById('attempted').textContent =
+    localStorage.getItem('attempted') || 0;
+  document.getElementById('latestScore').textContent =
+    localStorage.getItem('latestScore') || 'Not attempted';
 
-  // Get separate categories
-  let cats = [...new Set(seed.map(q => q.category))];
+  // Get categories from ALL questions
+  let cats = [...new Set(qs.map(q => q.category))];
 
-  // Create a separate topic card for every scheme
+  // Create topic cards
   document.getElementById('topics').innerHTML = cats.map(c =>
     `<div class="topic" onclick="topicQuiz('${c}')">
       <b>${c}</b>
-      <small>${seed.filter(q => q.category === c).length} MCQs</small>
+      <small>${qs.filter(q => q.category === c).length} MCQs</small>
     </div>`
   ).join('');
 
-  document.getElementById('latest').innerHTML = seed.slice(-5).reverse().map(q =>
+  // Latest questions from all MCQs
+  document.getElementById('latest').innerHTML = qs.slice(-5).reverse().map(q =>
     `<div class="mcq">
       <span class="tag">${q.category}</span>
       <h3>${q.question}</h3>
@@ -855,11 +858,9 @@ function home() {
 }
 
 function topicQuiz(c) {
-  // Select questions only from the clicked scheme
-  quiz = seed.filter(q => q.category === c);
+  quiz = qs.filter(q => q.category === c);
   begin();
 }
-
 function startQuiz() {
   quiz = [...qs].sort(() => Math.random() - 0.5).slice(0, Math.min(10, qs.length));
   begin();
@@ -889,16 +890,28 @@ function showQ() {
 
 function answer(i) {
   if (answered) return;
-  answered = true;
-  let q = quiz[pos], b = document.querySelectorAll('.option');
-  b[q.correct].classList.add('correct');
 
-  if (i === q.correct) {
+  answered = true;
+
+  let q = quiz[pos];
+
+  // Support both "correct" and "answer"
+  let correctAnswer =
+    q.correct !== undefined ? q.correct : q.answer;
+
+  let b = document.querySelectorAll('.option');
+
+  b[correctAnswer].classList.add('correct');
+
+  if (i === correctAnswer) {
     score++;
-    document.getElementById('feedback').textContent = '✓ Correct!';
+    document.getElementById('feedback').textContent =
+      '✓ Correct!';
   } else {
     b[i].classList.add('wrong');
-    document.getElementById('feedback').textContent = '✗ Incorrect. Correct answer: ' + q.options[q.correct];
+    document.getElementById('feedback').textContent =
+      '✗ Incorrect. Correct answer: ' +
+      q.options[correctAnswer];
   }
 }
 

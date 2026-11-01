@@ -652,9 +652,173 @@ const forexMCQs = [
   {
     id: 75,
     category: "Section 5 of FEMA deals with:",
-    options: ["Capital account transactions", "Current account transactions", "Export declarations", "Penalties only
+    options: ["Capital account transactions", "Current account transactions", "Export declarations", "Penalties only"],
+    answer: 1
+  },
+  {
+    id: 76,
+    category: "Current account transactions under Section 5 are generally:",
+    options: ["Never permitted", "Freely permitted subject to reasonable restrictions", "Allowed only once in a lifetime", "Restricted to banks"],
+    answer: 1
+  },
+  {
+    id: 77,
+    category: "Section 6 of FEMA deals with:",
+    options: ["Current account transactions", "Capital account transactions", "Export of goods", "Foreign exchange definitions"],
+    answer: 1
+  },
+  {
+    id: 78,
+    category: "Capital account transactions are permitted under FEMA:",
+    options: ["Without any regulatory framework", "Only to the extent specified by the competent regulatory framework", "Only for exporters", "Only in Indian currency"],
+    answer: 1
+  },
+  {
+    id: 79,
+    category: "Section 7 of FEMA relates to:",
+    options: ["Import of gold", "Export of goods and services", "Travel remittances", "Money changing"],
+    answer: 1
+  },
+  {
+    id: 80,
+    category: "Section 8 establishes the general duty relating to:",
+    options: ["Realisation and repatriation of foreign exchange due", "Import licensing", "Stock market trading", "Tax deduction"],
+    answer: 0
+  },
+  {
+    id: 81,
+    category: "Section 10 of FEMA deals with:",
+    options: ["Authorised persons", "Export declarations", "Foreign securities only", "Penalties only"],
+    answer: 0
+  },
+  {
+    id: 82,
+    category: "Section 11 provides RBI the power to:",
+    options: ["Issue directions", "Print passports", "Approve all imports", "Fix all merchant rates"],
+    answer: 0
+  },
+  {
+    id: 83,
+    category: "According to the handbook recap, Schedule I of the Current Account Rules covers:",
+    options: ["Prohibited transactions", "RBI reporting only", "Export incentives", "Capital market investments"],
+    answer: 0
+  },
+  {
+    id: 84,
+    category: "According to the handbook recap, Schedule II generally requires:",
+    options: ["No approval", "Government approval", "Only branch manager approval", "Automatic approval"],
+    answer: 1
+  },
 
-let qs = seed;
+  // =========================
+  // AUTHORISED DEALER BRANCHES
+  // =========================
+
+  {
+    id: 85,
+    category: "Authorised Dealer Branches",
+    question: "AD Category-I banks are authorised to handle:",
+    options: ["Only travel transactions", "All current and capital account transactions as per RBI directions", "Only currency notes", "Only examination fee remittances"],
+    answer: 1
+  },
+  {
+    id: 86,
+    category: "AD Category-II entities generally handle:",
+    options: ["All capital account transactions", "Specified non-trade current account transactions", "Only export bills", "Only government securities"],
+    answer: 1
+  },
+  {
+    id: 87,
+    category: "FFMC stands for:",
+    options: ["Foreign Fund Management Company", "Full Fledged Money Changer", "Federal Foreign Market Corporation", "Forward Finance Management Centre"],
+    answer: 1
+  },
+  {
+    id: 88,
+    category: "An FFMC is generally permitted to deal in:",
+    options: ["All capital account transactions", "Foreign currency notes, coins and travellers' cheques for permitted visits", "Only export finance", "Only ECB transactions"],
+    answer: 1
+  },
+  {
+    id: 89,
+    category: "One core duty of an AD branch is to establish:",
+    options: ["The customer's political preference", "The bona fides of the transaction", "The customer's stock portfolio", "The international gold price"],
+    answer: 1
+  },
+  {
+    id: 90,
+    category: "Section 10(4) and 10(5) place a duty on the AD to ensure that a transaction is not designed to:",
+    options: ["Increase exports", "Contravene FEMA", "Reduce exchange risk", "Generate profit"],
+    answer: 1
+  },
+  {
+    id: 91,
+    category: "Which of the following may be verified as underlying documentary evidence by an AD branch?",
+    options: ["Invoice and contract", "Shipping documents and Bill of Entry", "Applicable remittance forms", "All of the above"],
+    answer: 3
+  },
+  {
+    id: 92,
+    category: "Every cross-border remittance is reported using an appropriate:",
+    options: ["Purpose code", "IFSC code only", "PIN code", "PAN series only"],
+    answer: 0
+  },
+  {
+    id: 93,
+    category: "Shipping bills and export realisations are monitored through:",
+    options: ["IDPMS", "EDPMS", "NEFT", "RTGS"],
+    answer: 1
+  },
+  {
+    id: 94,
+    category: "Import remittances and Bills of Entry are monitored through:",
+    options: ["EDPMS", "IDPMS", "SWIFT only", "UPI"],
+    answer: 1
+  },
+  {
+    id: 95,
+    category: "An AD branch should follow up:",
+    options: ["Only completed export bills", "Overdue export bills and obtain extension or write-off where applicable", "Only domestic loans", "Only cash transactions"],
+    answer: 1
+  },
+  {
+    id: 96,
+    category: "A NOSTRO/VOSTRO relationship is important primarily for:",
+    options: ["Domestic salary payments", "Cross-border settlement", "Income tax filing", "ATM operations"],
+    answer: 1
+  },
+  {
+    id: 97,
+    category: "The handbook advises that the mirror account should generally be:",
+    options: ["Reconciled daily", "Ignored for one year", "Closed every week", "Used only for cash transactions"],
+    answer: 0
+  },
+  {
+    id: 98,
+    category: "An AD branch should offer forward cover primarily for:",
+    options: ["Speculative transactions without exposure", "Genuine foreign exchange exposures", "All domestic deposits", "Only government transactions"],
+    answer: 1
+  },
+  {
+    id: 99,
+    category: "A wrong purpose code can result in:",
+    options: ["Incorrect balance-of-payments data and audit observations", "Automatic export incentives", "Higher interest income", "Faster customs clearance"],
+    answer: 0
+  },
+  {
+    id: 100,
+    category: "The core chain of authority in the forex system is best described as:",
+    options: [
+      "Customer regulates and RBI transacts",
+      "RBI regulates, AD bank intermediates, customer transacts",
+      "Exporter regulates and RBI intermediates",
+      "Money changer regulates all transactions"
+    ],
+    answer: 1
+  }
+];
+
+let qs = [...seed, ...forexMCQs];
 let quiz = [], pos = 0, score = 0, answered = false;
 
 function page(id) {

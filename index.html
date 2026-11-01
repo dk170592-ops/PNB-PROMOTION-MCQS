@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PNB Promotion MCQ | Exam Preparation Portal</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="brand"><div class="logo">PNB</div><div><b>PNB Promotion MCQ</b><small>Practice Portal for Bank Promotion Exams</small></div></div>
+<nav><button onclick="page('home')">Home</button><button onclick="page('practice')">Practice</button><button onclick="page('admin')">Admin</button></nav></header>
+
+<main>
+<section id="home" class="page active">
+<div class="hero"><div><span class="pill">BANK PROMOTION PREPARATION</span><h1>Practice. Learn. Get Promotion Ready.</h1><p>Daily MCQs for PNB officers covering Banking, Credit, RBI, NPA, MSME, Recovery and General Banking.</p>
+<button class="primary" onclick="startQuiz()">Start Free Quiz →</button></div>
+<div class="hero-card"><h3>Today's Practice</h3><div class="big" id="qCount">0</div><p>MCQs available</p><hr><b>Latest score: <span id="latestScore">Not attempted</span></b></div></div>
+
+<div class="cards"><div><b id="totalMcq">0</b><span>Total MCQs</span></div><div><b id="attempted">0</b><span>Questions Attempted</span></div><div><b>10</b><span>Questions per Quiz</span></div></div>
+<h2>Explore Topics</h2><div class="topics" id="topics"></div>
+<h2>Latest Questions</h2><div id="latest" class="latest"></div>
+</section>
+
+<section id="practice" class="page"><div class="quiz">
+<div class="quiz-head"><span id="progress">Ready</span><span id="quizScore"></span></div>
+<div class="bar"><i id="bar"></i></div><h2 id="question">Click Start Quiz to begin.</h2>
+<div id="options"></div><p id="feedback"></p>
+<button class="primary" id="startBtn" onclick="startQuiz()">Start Quiz</button>
+<button class="primary hidden" id="nextBtn" onclick="nextQuestion()">Next Question →</button>
+<button class="secondary hidden" id="restartBtn" onclick="startQuiz()">Try Again</button>
+</div></section>
+
+<section id="admin" class="page"><div class="admin-grid">
+<div class="panel"><h2>Admin: Post a New MCQ</h2><p class="muted">Demo version: questions are stored in your browser.</p>
+<label>Category</label><select id="category"><option>Banking & RBI</option><option>Credit & Loans</option><option>NPA & Recovery</option><option>MSME & Priority Sector</option><option>PNB Knowledge</option><option>Digital Banking</option></select>
+<label>Question</label><textarea id="newQuestion" placeholder="Enter the MCQ question"></textarea>
+<label>Option A</label><input id="o0"><label>Option B</label><input id="o1"><label>Option C</label><input id="o2"><label>Option D</label><input id="o3">
+<label>Correct Answer</label><select id="correct"><option value="0">Option A</option><option value="1">Option B</option><option value="2">Option C</option><option value="3">Option D</option></select>
+<button class="primary full" onclick="publish()">Publish MCQ</button></div>
+<div class="panel"><h2>Website Admin Features</h2><ul><li>Add and manage MCQs</li><li>Create topic-wise quizzes</li><li>Track scores locally</li><li>Mobile-friendly interface</li></ul><p class="muted">For a public website with multiple users, connect Firebase or Supabase for login and a cloud database.</p></div>
+</div></section>
+</main>
+<footer>© 2026 PNB Promotion MCQ Portal • Independent exam preparation website</footer>
+<script src="app.js"></script></body></html>

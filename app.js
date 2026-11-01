@@ -48,8 +48,9 @@ const seed = [
 {category:"PNB AGRI PLUS",question:"Enhancement in OD limit can generally be considered after:",options:["3 months of original sanction","6 months of original sanction","1 year of original sanction","3 years of original sanction"],correct:2},
 {category:"PNB AGRI PLUS",question:"For OD enhancement, projections accepted at the last sanction should generally have been achieved to at least:",options:["70%","75%","85%","100%"],correct:2},
 {category:"PNB AGRI PLUS",question:"For a PNB AGRI PLUS borrower, the minimum existing sanctioned credit facilities required for eligibility for a car loan is:",options:["₹25 lakh","₹50 lakh","₹75 lakh","₹100 lakh"],correct:3},
-{category:"PNB AGRI PLUS",question:"The maximum repayment period for a new car/Van/Jeep/MUV/SUV loan is:",options:["48 EMIs","60 EMIs","72 EMIs","84 EMIs"],correct:3}
-{category:"Ajivika Sahayata Scheme 2026",question:"ASAR stands for:",options:["Agricultural Support and Rural Scheme","Aajeevika Sahayta Rin Scheme","Annual Social Assistance Programme","Agricultural Security and Recovery Scheme"],correct:1},
+{category:"PNB AGRI PLUS",question:"The maximum repayment period for a new car/Van/Jeep/MUV/SUV loan is:",options:["48 EMIs","60 EMIs","72 EMIs","84 EMIs"],correct:3},
+  {category:"Ajivika Sahayata Scheme 2026",question:"ASAR stands for:",options:["Agricultural Support and Rural Scheme","Aajeevika Sahayta Rin Scheme","Annual Social Assistance Programme","Agricultural Security and Recovery Scheme"],correct:1},
+  {category:"Ajivika Sahayata Scheme 2026",question:"ASAR stands for:",options:["Agricultural Support and Rural Scheme","Aajeevika Sahayta Rin Scheme","Annual Social Assistance Programme","Agricultural Security and Recovery Scheme"],correct:1},
 {category:"Ajivika Sahayata Scheme 2026",question:"The ASAR Scheme is covered under which PNB Agriculture Division Circular?",options:["Circular No. 56/2025","Circular No. 69/2025","Circular No. 49/2026","Circular No. 122/2024"],correct:1},
 {category:"Ajivika Sahayata Scheme 2026",question:"The new mission for urban poverty alleviation mentioned in the scheme is:",options:["PM SVANidhi","DAY-NRLM","Deendayal Jan Aajeevika Yojana-Shehri (DJAY-S)","PM Vishwakarma"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"The Financial Inclusion and Enterprise Development component is known as:",options:["FI&ED","FIEDA","FIEP","FIDE"],correct:0},
@@ -105,6 +106,7 @@ const seed = [
 {category:"Ajivika Sahayata Scheme 2026",question:"The maximum JLG loan for Waste Managers is:",options:["₹4 lakh","₹10 lakh","₹15 lakh","₹20 lakh"],correct:3}
 ];
 
+
 let qs = seed;
 let quiz = [], pos = 0, score = 0, answered = false;
 
@@ -115,6 +117,7 @@ function page(id) {
 }
 
 function home() {
+  
   document.getElementById('qCount').textContent = qs.length;
   document.getElementById('totalMcq').textContent = qs.length;
   document.getElementById('attempted').textContent = localStorage.getItem('attempted') || 0;

@@ -842,47 +842,49 @@ function page(id) {
 function home() {
 
   document.getElementById('qCount').textContent = qs.length;
-document.getElementById('totalMcq').textContent = qs.length;
+  document.getElementById('totalMcq').textContent = qs.length;
+
   document.getElementById('attempted').textContent =
     localStorage.getItem('attempted') || 0;
+
   document.getElementById('latestScore').textContent =
     localStorage.getItem('latestScore') || 'Not attempted';
 
-  // Main topics
-  const topics = [
-    {
-      name: "PNB AGRI PLUS",
-      filter: q => q.category === "PNB AGRI PLUS"
-    },
-    {
-      name: "Ajivika Sahayata Scheme 2026",
-      filter: q => q.category === "Ajivika Sahayata Scheme 2026"
-    },
-    {
-      name: "Foreign Exchange MCQs",
-      filter: q => forexMCQs.includes(q)
-    }
-  ];
 
-  document.getElementById('topics').innerHTML = topics.map((topic, index) => {
-    const count = qs.filter(topic.filter).length;
+  // ONLY THREE TOPICS
+  document.getElementById('topics').innerHTML =
+    '<div class="topic" onclick="topicQuiz(\'agri\')">' +
+      '<b>PNB AGRI PLUS</b>' +
+      '<small>' +
+      seed.filter(function(q) {
+        return q.category === "PNB AGRI PLUS";
+      }).length +
+      ' MCQs</small>' +
+    '</div>' +
 
-    return `
-      <div class="topic" onclick="topicQuiz(${index})">
-        <b>${topic.name}</b>
-        <small>${count} MCQs</small>
-      </div>
-    `;
-  }).join('');
+    '<div class="topic" onclick="topicQuiz(\'ajivika\')">' +
+      '<b>Ajivika Sahayata Scheme 2026</b>' +
+      '<small>' +
+      seed.filter(function(q) {
+        return q.category === "Ajivika Sahayata Scheme 2026";
+      }).length +
+      ' MCQs</small>' +
+    '</div>' +
 
-  document.getElementById('latest').innerHTML = qs.slice(-5).reverse().map(q =>
-    `<div class="mcq">
-      <span class="tag">${q.category}</span>
-      <h3>${q.question}</h3>
-    </div>`
-  ).join('');
+    '<div class="topic" onclick="topicQuiz(\'forex\')">' +
+      '<b>Foreign Exchange MCQs</b>' +
+      '<small>' + forexMCQs.length + ' MCQs</small>' +
+    '</div>';
+
+
+  document.getElementById('latest').innerHTML =
+    qs.slice(-5).reverse().map(function(q) {
+      return '<div class="mcq">' +
+        '<span class="tag">' + q.category + '</span>' +
+        '<h3>' + q.question + '</h3>' +
+      '</div>';
+    }).join('');
 }
-
 
 function topicQuiz(index) {
 

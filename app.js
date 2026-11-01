@@ -103,7 +103,556 @@ const seed = [
 {category:"Ajivika Sahayata Scheme 2026",question:"The maximum JLG loan for Domestic Workers is:",options:["₹2 lakh","₹4 lakh","₹10 lakh","₹20 lakh"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"The maximum JLG loan for Waste Managers is:",options:["₹4 lakh","₹10 lakh","₹15 lakh","₹20 lakh"],correct:3}
 ];
+const forexMCQs = [
 
+  // =========================
+  // FOREIGN EXCHANGE BASICS
+  // =========================
+
+  {
+    id: 1,
+    category: "Foreign Exchange Basics",
+    question: "Under FEMA, 1999, foreign exchange is defined under which section?",
+    options: ["Section 2(c)", "Section 2(e)", "Section 2(n)", "Section 2(v)"],
+    answer: 2
+  },
+  {
+    id: 2,
+    category: "Foreign Exchange Basics",
+    question: "Foreign exchange primarily enables:",
+    options: ["Only domestic trade", "International trade and cross-border transactions", "Only cash withdrawals", "Only government borrowing"],
+    answer: 1
+  },
+  {
+    id: 3,
+    category: "Foreign Exchange Basics",
+    question: "Foreign currency means:",
+    options: ["Only US Dollars", "Any currency other than Indian currency", "Indian currency held abroad", "Only currencies of developed countries"],
+    answer: 1
+  },
+  {
+    id: 4,
+    category: "Foreign Exchange Basics",
+    question: "Which of the following is included in foreign exchange under the statutory definition?",
+    options: ["Only foreign currency notes", "Only foreign securities", "Deposits and balances payable in foreign currency", "Only gold held abroad"],
+    answer: 2
+  },
+  {
+    id: 5,
+    category: "Foreign Exchange Basics",
+    question: "An instrument expressed in Indian currency but payable in foreign currency may be treated as:",
+    options: ["Domestic currency only", "Foreign exchange", "Capital goods", "A restricted import"],
+    answer: 1
+  },
+  {
+    id: 6,
+    category: "Foreign Exchange Basics",
+    question: "A foreign security is generally denominated in:",
+    options: ["Indian currency only", "Foreign currency", "Gold only", "Cryptocurrency only"],
+    answer: 1
+  },
+  {
+    id: 7,
+    category: "Foreign Exchange Basics",
+    question: "An Authorised Person is defined under FEMA in:",
+    options: ["Section 2(c)", "Section 2(e)", "Section 2(j)", "Section 2(n)"],
+    answer: 0
+  },
+  {
+    id: 8,
+    category: "Foreign Exchange Basics",
+    question: "A capital account transaction primarily alters:",
+    options: ["Only the exchange rate", "Assets or liabilities across India and outside India", "Only current income", "Only trade invoices"],
+    answer: 1
+  },
+  {
+    id: 9,
+    category: "Foreign Exchange Basics",
+    question: "A current account transaction is:",
+    options: ["Any transaction other than a capital account transaction", "Only an investment abroad", "Only purchase of foreign securities", "Only acquisition of property abroad"],
+    answer: 0
+  },
+  {
+    id: 10,
+    category: "Foreign Exchange Basics",
+    question: "Which is an example of a current account transaction mentioned in the handbook?",
+    options: ["Trade and travel", "Purchase of overseas equity only", "Creation of a foreign subsidiary only", "Acquisition of foreign immovable property only"],
+    answer: 0
+  },
+  {
+    id: 11,
+    category: "Foreign Exchange Basics",
+    question: "For FEMA residency purposes, a person resident in India generally refers to a person residing in India for more than:",
+    options: ["90 days", "120 days", "182 days during the preceding financial year", "365 days continuously"],
+    answer: 2
+  },
+  {
+    id: 12,
+    category: "Foreign Exchange Basics",
+    question: "Which institution regulates foreign exchange in India under FEMA?",
+    options: ["SEBI", "RBI", "IRDAI", "NABARD"],
+    answer: 1
+  },
+  {
+    id: 13,
+    category: "Foreign Exchange Basics",
+    question: "The foreign exchange market performs which of the following functions?",
+    options: ["Conversion of currencies", "Transfer of purchasing power", "Hedging and trade finance", "All of the above"],
+    answer: 3
+  },
+  {
+    id: 14,
+    category: "Foreign Exchange Basics",
+    question: "Hedging in the forex market helps a customer to:",
+    options: ["Eliminate all business risk", "Fix a future exchange rate for an exposure", "Avoid documentation", "Convert every transaction into cash"],
+    answer: 1
+  },
+  {
+    id: 15,
+    category: "Foreign Exchange Basics",
+    question: "Trade finance helps primarily by:",
+    options: ["Funding the gap between production and payment", "Fixing RBI policy rates", "Printing currency", "Regulating stock exchanges"],
+    answer: 0
+  },
+
+  // =========================
+  // FOREX MARKET STRUCTURE
+  // =========================
+
+  {
+    id: 16,
+    category: "Forex Market Structure",
+    question: "The interbank forex market primarily involves:",
+    options: ["Only individual customers", "Deals between banks and between banks and RBI", "Only exporters", "Only money changers"],
+    answer: 1
+  },
+  {
+    id: 17,
+    category: "Forex Market Structure",
+    question: "The merchant market involves transactions between:",
+    options: ["Two central banks only", "An AD branch and its customer", "Only foreign governments", "Two stock exchanges"],
+    answer: 1
+  },
+  {
+    id: 18,
+    category: "Forex Market Structure",
+    question: "The interbank rate is the basic raw material for:",
+    options: ["Income tax calculation", "Merchant rate construction", "Loan appraisal", "Deposit interest calculation"],
+    answer: 1
+  },
+  {
+    id: 19,
+    category: "Forex Market Structure",
+    question: "Settlement on the same day as the deal is known as:",
+    options: ["Spot", "TOM", "Cash/Ready", "Forward"],
+    answer: 2
+  },
+  {
+    id: 20,
+    category: "Forex Market Structure",
+    question: "The value date for a Cash/Ready transaction is:",
+    options: ["T+0", "T+1", "T+2", "T+3"],
+    answer: 0
+  },
+  {
+    id: 21,
+    category: "Forex Market Structure",
+    question: "TOM transactions generally settle on:",
+    options: ["The same day", "The next working day", "The second working day", "One month later"],
+    answer: 1
+  },
+  {
+    id: 22,
+    category: "Forex Market Structure",
+    question: "The standard market convention for a spot transaction is:",
+    options: ["T+0", "T+1", "T+2", "T+7"],
+    answer: 2
+  },
+  {
+    id: 23,
+    category: "Forex Market Structure",
+    question: "A forward transaction settles:",
+    options: ["Only on the same day", "Only on T+1", "Beyond spot on an agreed future date", "Only after one year"],
+    answer: 2
+  },
+  {
+    id: 24,
+    category: "Forex Market Structure",
+    question: "A forex swap involves:",
+    options: ["Only purchase of one currency", "Only sale of one currency", "Simultaneous purchase and sale for two value dates", "Conversion of currency into gold"],
+    answer: 2
+  },
+  {
+    id: 25,
+    category: "Forex Market Structure",
+    question: "Which rate is generally the lowest in the merchant rate ladder?",
+    options: ["Bill Buying", "TT Buying", "TT Selling", "Bill Selling"],
+    answer: 0
+  },
+  {
+    id: 26,
+    category: "Forex Market Structure",
+    question: "Which rate is generally the highest in the merchant rate ladder?",
+    options: ["Bill Buying", "TT Buying", "TT Selling", "Bill Selling"],
+    answer: 3
+  },
+  {
+    id: 27,
+    category: "Forex Market Structure",
+    question: "The correct merchant rate ladder is:",
+    options: [
+      "Bill Buying < TT Buying < Base < TT Selling < Bill Selling",
+      "Bill Selling < TT Selling < Base < TT Buying < Bill Buying",
+      "TT Buying < Bill Buying < Base < Bill Selling < TT Selling",
+      "Base < Bill Buying < TT Buying < TT Selling < Bill Selling"
+    ],
+    answer: 0
+  },
+  {
+    id: 28,
+    category: "Forex Market Structure",
+    question: "The bank generally buys foreign currency:",
+    options: ["At the highest rate and sells at the lowest", "Low and sells high", "At the same rate always", "Only at RBI rates"],
+    answer: 1
+  },
+  {
+    id: 29,
+    category: "Forex Market Structure",
+    question: "Credit of a clean inward remittance is generally made at:",
+    options: ["Bill Buying rate", "TT Buying rate", "TT Selling rate", "Bill Selling rate"],
+    answer: 1
+  },
+  {
+    id: 30,
+    category: "Forex Market Structure",
+    question: "Purchase, discount or negotiation of an export bill generally uses:",
+    options: ["TT Buying rate", "Bill Buying rate", "TT Selling rate", "Bill Selling rate"],
+    answer: 1
+  },
+  {
+    id: 31,
+    category: "Forex Market Structure",
+    question: "An outward remittance under LRS generally uses:",
+    options: ["Bill Buying rate", "TT Buying rate", "TT Selling rate", "Bill Selling rate"],
+    answer: 2
+  },
+  {
+    id: 32,
+    category: "Forex Market Structure",
+    question: "The rate used for retirement of an import bill is generally:",
+    options: ["Bill Buying rate", "TT Buying rate", "TT Selling rate", "Bill Selling rate"],
+    answer: 3
+  },
+
+  // =========================
+  // EXCHANGE RATE MECHANISM
+  // =========================
+
+  {
+    id: 33,
+    category: "Exchange Rate Mechanism",
+    question: "India uses which type of quotation for exchange rates?",
+    options: ["Indirect quotation", "Direct quotation", "Gold quotation", "Fixed quotation only"],
+    answer: 1
+  },
+  {
+    id: 34,
+    category: "Exchange Rate Mechanism",
+    question: "Under a direct quote, the rate shows:",
+    options: ["Price of home currency in foreign currency", "Price of one unit of foreign currency in home currency", "Only the interest rate", "Only the inflation rate"],
+    answer: 1
+  },
+  {
+    id: 35,
+    category: "Exchange Rate Mechanism",
+    question: "India moved to the direct quotation system with effect from:",
+    options: ["1 January 1991", "2 August 1993", "1 June 2000", "1 April 2016"],
+    answer: 1
+  },
+  {
+    id: 36,
+    category: "Exchange Rate Mechanism",
+    question: "Under a direct quote, the usual maxim is:",
+    options: ["Buy high, sell low", "Buy low, sell high", "Buy and sell at the same rate", "Never buy foreign currency"],
+    answer: 1
+  },
+  {
+    id: 37,
+    category: "Exchange Rate Mechanism",
+    question: "Under an indirect quote, the maxim generally becomes:",
+    options: ["Buy low, sell high", "Buy high, sell low", "Buy only", "Sell only"],
+    answer: 1
+  },
+  {
+    id: 38,
+    category: "Exchange Rate Mechanism",
+    question: "India follows which exchange rate system?",
+    options: ["Completely fixed system", "Managed floating system", "Gold standard", "Currency board system"],
+    answer: 1
+  },
+  {
+    id: 39,
+    category: "Exchange Rate Mechanism",
+    question: "In a managed floating system, the rate is:",
+    options: ["Fixed permanently by law", "Market determined with central bank intervention to smooth volatility", "Determined only by exporters", "Determined only by importers"],
+    answer: 1
+  },
+  {
+    id: 40,
+    category: "Exchange Rate Mechanism",
+    question: "A movement from USD 1 = ₹87 to USD 1 = ₹88 indicates:",
+    options: ["Rupee appreciation", "Rupee depreciation", "No change", "Dollar depreciation against all currencies"],
+    answer: 1
+  },
+  {
+    id: 41,
+    category: "Exchange Rate Mechanism",
+    question: "Under a direct USD/INR quote, a rise in the numerical rate generally means:",
+    options: ["The rupee has strengthened", "The rupee has weakened", "There is no currency movement", "The dollar has disappeared"],
+    answer: 1
+  },
+  {
+    id: 42,
+    category: "Exchange Rate Mechanism",
+    question: "Rupee depreciation generally makes domestic goods:",
+    options: ["More expensive abroad", "Cheaper abroad", "Unavailable abroad", "Illegal to export"],
+    answer: 1
+  },
+  {
+    id: 43,
+    category: "Exchange Rate Mechanism",
+    question: "The bid rate is the rate at which the quoting bank:",
+    options: ["Buys foreign currency", "Sells foreign currency", "Borrows from RBI", "Lends to customers"],
+    answer: 0
+  },
+  {
+    id: 44,
+    category: "Exchange Rate Mechanism",
+    question: "In a normal two-way quote, the bid is generally:",
+    options: ["Higher than the offer", "Lower than the offer", "Always equal to the offer", "Unrelated to the offer"],
+    answer: 1
+  },
+  {
+    id: 45,
+    category: "Exchange Rate Mechanism",
+    question: "A cross-currency rate refers to a rate directly involving:",
+    options: ["Only INR and USD", "Two currencies other than through direct domestic quotation", "Only gold and INR", "Only central banks"],
+    answer: 1
+  },
+  {
+    id: 46,
+    category: "Exchange Rate Mechanism",
+    question: "For a EUR/INR cross rate, where EUR/USD and USD/INR are given, the handbook illustration uses:",
+    options: ["Addition", "Subtraction", "Multiplication", "Division only"],
+    answer: 2
+  },
+  {
+    id: 47,
+    category: "Exchange Rate Mechanism",
+    question: "When USD is the base currency in the international quote, such as USD/JPY, the INR cross calculation generally requires:",
+    options: ["Multiplication", "Division", "Addition", "No calculation"],
+    answer: 1
+  },
+  {
+    id: 48,
+    category: "Exchange Rate Mechanism",
+    question: "When calculating a two-way cross rate, the correct principle is:",
+    options: ["Cross bid with ask", "Cross bid with bid and ask with ask", "Use only mid rates", "Always add both rates"],
+    answer: 1
+  },
+  {
+    id: 49,
+    category: "Exchange Rate Mechanism",
+    question: "After calculating an interbank cross rate, a merchant margin is generally:",
+    options: ["Added to buying and selling rates", "Deducted from both rates", "Deducted from buying and added to selling", "Ignored completely"],
+    answer: 2
+  },
+  {
+    id: 50,
+    category: "Exchange Rate Mechanism",
+    question: "If a spot value date falls on a holiday in a relevant settlement centre, the value date generally:",
+    options: ["Moves backward", "Is cancelled", "Rolls forward to the next settlement day", "Becomes T+0"],
+    answer: 2
+  },
+
+  // =========================
+  // FORWARD RATES
+  // =========================
+
+  {
+    id: 51,
+    category: "Forward Rates",
+    question: "A forward rate is an exchange rate agreed today for settlement:",
+    options: ["Only today", "On a specified future date", "Only after RBI approval", "Only at the end of a financial year"],
+    answer: 1
+  },
+  {
+    id: 52,
+    category: "Forward Rates",
+    question: "According to the handbook, a forward rate is primarily:",
+    options: ["A forecast of the future exchange rate", "Spot rate adjusted by swap points", "An RBI fixed rate", "A tax rate"],
+    answer: 1
+  },
+  {
+    id: 53,
+    category: "Forward Rates",
+    question: "The basic formula for forward rate is:",
+    options: [
+      "Spot Rate × Interest Rate",
+      "Spot Rate ± Swap Points",
+      "Spot Rate ÷ Inflation",
+      "Spot Rate + Tax"
+    ],
+    answer: 1
+  },
+  {
+    id: 54,
+    category: "Forward Rates",
+    question: "Swap points are primarily driven by:",
+    options: ["Weather conditions", "Interest rate differential between currencies", "Only import volume", "Only gold prices"],
+    answer: 1
+  },
+  {
+    id: 55,
+    category: "Forward Rates",
+    question: "A currency is at a forward premium when:",
+    options: ["Forward rate is lower than spot", "Forward rate is equal to spot", "Forward rate is higher than spot", "There is no forward contract"],
+    answer: 2
+  },
+  {
+    id: 56,
+    category: "Forward Rates",
+    question: "A currency is at a forward discount when:",
+    options: ["Forward rate is higher than spot", "Forward rate is lower than spot", "Forward rate is always zero", "Spot rate is unavailable"],
+    answer: 1
+  },
+  {
+    id: 57,
+    category: "Forward Rates",
+    question: "If the spot USD/INR rate is 83.2500 and the one-month forward rate is 83.4500, the dollar is at:",
+    options: ["Par", "A discount", "A premium", "Zero value"],
+    answer: 2
+  },
+  {
+    id: 58,
+    category: "Forward Rates",
+    question: "In the handbook's illustration, the one-month forward premium between 83.2500 and 83.4500 is:",
+    options: ["₹0.02", "₹0.20", "₹2.00", "₹20.00"],
+    answer: 1
+  },
+  {
+    id: 59,
+    category: "Forward Rates",
+    question: "The annualised forward premium formula given in the handbook is based on:",
+    options: ["Points divided by spot, adjusted for the period", "Spot multiplied by months", "Forward rate divided by inflation", "Only the RBI repo rate"],
+    answer: 0
+  },
+  {
+    id: 60,
+    category: "Forward Rates",
+    question: "A forward premium should not automatically be interpreted as:",
+    options: ["An interest rate differential effect", "Expected depreciation of the same magnitude", "A difference between forward and spot", "A pricing element"],
+    answer: 1
+  },
+  {
+    id: 61,
+    category: "Forward Rates",
+    question: "In a forward purchase from an exporter when foreign currency is at a premium, the premium is generally:",
+    options: ["Added to the spot buying rate", "Deducted from the spot buying rate", "Ignored", "Added only to tax"],
+    answer: 0
+  },
+  {
+    id: 62,
+    category: "Forward Rates",
+    question: "For a forward sale to an importer when foreign currency is at a premium, the premium is generally:",
+    options: ["Added to the spot selling rate", "Deducted from the spot selling rate", "Ignored", "Converted into a discount"],
+    answer: 0
+  },
+  {
+    id: 63,
+    category: "Forward Rates",
+    question: "In a discount situation, the forward points are generally:",
+    options: ["Added instead of deducted", "Deducted instead of added", "Always ignored", "Converted into tax"],
+    answer: 1
+  },
+  {
+    id: 64,
+    category: "Forward Rates",
+    question: "Merchant forward transactions are governed, among other provisions, by:",
+    options: ["FEDAI Rule 5 and Rule 8", "Only the Income Tax Act", "Companies Act only", "SEBI listing regulations"],
+    answer: 0
+  },
+  {
+    id: 65,
+    category: "Forward Rates",
+    question: "Under an option-period forward contract, the bank generally quotes:",
+    options: ["The rate most favourable to the customer", "The midpoint rate", "The rate most favourable to itself across the option period", "Only the opening spot rate"],
+    answer: 2
+  },
+
+  // =========================
+  // FEMA 1999
+  // =========================
+
+  {
+    id: 66,
+    category: "FEMA 1999",
+    question: "FEMA, 1999 came into force on:",
+    options: ["1 January 1999", "1 June 2000", "2 August 1993", "1 April 2001"],
+    answer: 1
+  },
+  {
+    id: 67,
+    category: "FEMA replaced:",
+    options: ["RBI Act", "FERA, 1973", "Banking Regulation Act", "Companies Act"],
+    answer: 1
+  },
+  {
+    id: 68,
+    category: "FEMA changed India's forex philosophy from:",
+    options: ["Management to prohibition", "Regulation to management", "Banking to insurance", "Trade to taxation"],
+    answer: 1
+  },
+  {
+    id: 69,
+    category: "FEMA generally treats contravention as:",
+    options: ["A civil offence", "A capital gain", "A trade credit", "An export incentive"],
+    answer: 0
+  },
+  {
+    id: 70,
+    category: "Under the philosophy described in the handbook, FEMA generally means:",
+    options: ["Everything is prohibited unless permitted", "Everything is permitted unless prohibited", "All forex is banned", "Only RBI can hold foreign currency"],
+    answer: 1
+  },
+  {
+    id: 71,
+    category: "FEMA aims to facilitate:",
+    options: ["Only domestic trade", "External trade and payments and orderly forex market development", "Only taxation", "Only government expenditure"],
+    answer: 1
+  },
+  {
+    id: 72,
+    category: "Section 3 of FEMA deals with:",
+    options: ["Export of goods", "Dealing in foreign exchange", "Capital account transactions", "RBI audit"],
+    answer: 1
+  },
+  {
+    id: 73,
+    category: "Under Section 3, a person should deal in foreign exchange through:",
+    options: ["Any private individual", "An authorised person", "Only a stock broker", "Only an exporter"],
+    answer: 1
+  },
+  {
+    id: 74,
+    category: "Section 4 of FEMA relates to:",
+    options: ["Holding of foreign exchange", "Current account transactions", "Authorised persons", "Export declarations"],
+    answer: 0
+  },
+  {
+    id: 75,
+    category: "Section 5 of FEMA deals with:",
+    options: ["Capital account transactions", "Current account transactions", "Export declarations", "Penalties only
 
 let qs = seed;
 let quiz = [], pos = 0, score = 0, answered = false;

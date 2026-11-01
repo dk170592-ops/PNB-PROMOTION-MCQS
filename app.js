@@ -50,7 +50,6 @@ const seed = [
 {category:"PNB AGRI PLUS",question:"For a PNB AGRI PLUS borrower, the minimum existing sanctioned credit facilities required for eligibility for a car loan is:",options:["₹25 lakh","₹50 lakh","₹75 lakh","₹100 lakh"],correct:3},
 {category:"PNB AGRI PLUS",question:"The maximum repayment period for a new car/Van/Jeep/MUV/SUV loan is:",options:["48 EMIs","60 EMIs","72 EMIs","84 EMIs"],correct:3},
   {category:"Ajivika Sahayata Scheme 2026",question:"ASAR stands for:",options:["Agricultural Support and Rural Scheme","Aajeevika Sahayta Rin Scheme","Annual Social Assistance Programme","Agricultural Security and Recovery Scheme"],correct:1},
-  {category:"Ajivika Sahayata Scheme 2026",question:"ASAR stands for:",options:["Agricultural Support and Rural Scheme","Aajeevika Sahayta Rin Scheme","Annual Social Assistance Programme","Agricultural Security and Recovery Scheme"],correct:1},
 {category:"Ajivika Sahayata Scheme 2026",question:"The ASAR Scheme is covered under which PNB Agriculture Division Circular?",options:["Circular No. 56/2025","Circular No. 69/2025","Circular No. 49/2026","Circular No. 122/2024"],correct:1},
 {category:"Ajivika Sahayata Scheme 2026",question:"The new mission for urban poverty alleviation mentioned in the scheme is:",options:["PM SVANidhi","DAY-NRLM","Deendayal Jan Aajeevika Yojana-Shehri (DJAY-S)","PM Vishwakarma"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"The Financial Inclusion and Enterprise Development component is known as:",options:["FI&ED","FIEDA","FIEP","FIDE"],correct:0},
@@ -60,7 +59,6 @@ const seed = [
 {category:"Ajivika Sahayata Scheme 2026",question:"The maximum age of a beneficiary on the date of registration is:",options:["55 years","58 years","60 years","65 years"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"Which of the following is NOT one of the six identified VOGs?",options:["Domestic Workers","Care Workers","Agricultural Landowners","Gig Workers"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"A beneficiary under the ASAR Scheme should:",options:["Be a defaulter of another bank","Not be a defaulter to any bank or financial institution","Have no bank account","Be a government employee"],correct:1},
-
 {category:"Ajivika Sahayata Scheme 2026",question:"A beneficiary who has availed a MUDRA loan can be eligible under the new mission if:",options:["The MUDRA loan is still outstanding","The beneficiary has fully repaid the loan","The loan is classified as NPA","No repayment has been made"],correct:1},
 {category:"Ajivika Sahayata Scheme 2026",question:"Identification of VOG members is conducted by:",options:["RBI","NABARD","Urban Local Bodies (ULBs)","Income Tax Department"],correct:2},
 {category:"Ajivika Sahayata Scheme 2026",question:"Identified VOG members will receive:",options:["A passport","A unique identification number","A PAN card automatically","A credit card"],correct:1},

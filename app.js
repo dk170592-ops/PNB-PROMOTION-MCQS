@@ -842,7 +842,7 @@ function page(id) {
 function home() {
 
   document.getElementById('qCount').textContent = qs.length;
-  document.getElementById('totalMcq').textContent = qs.length;
+document.getElementById('totalMcq').textContent = qs.length;
   document.getElementById('attempted').textContent =
     localStorage.getItem('attempted') || 0;
   document.getElementById('latestScore').textContent =

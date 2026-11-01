@@ -841,38 +841,67 @@ function page(id) {
 
 function home() {
 
-  // Total MCQs
   document.getElementById('qCount').textContent = qs.length;
   document.getElementById('totalMcq').textContent = qs.length;
-
   document.getElementById('attempted').textContent =
     localStorage.getItem('attempted') || 0;
-
   document.getElementById('latestScore').textContent =
     localStorage.getItem('latestScore') || 'Not attempted';
 
-  // Get categories
-  let cats = [...new Set(qs.map(q => q.category))];
+  // Main topics
+  const topics = [
+    {
+      name: "PNB AGRI PLUS",
+      filter: q => q.category === "PNB AGRI PLUS"
+    },
+    {
+      name: "Ajivika Sahayata Scheme 2026",
+      filter: q => q.category === "Ajivika Sahayata Scheme 2026"
+    },
+    {
+      name: "Foreign Exchange MCQs",
+      filter: q => forexMCQs.includes(q)
+    }
+  ];
 
-  // Create topic cards
-  document.getElementById('topics').innerHTML = cats.map(c =>
-    `<div class="topic" onclick="topicQuiz('${c}')">
-      <b>${c}</b>
-      <small>${qs.filter(q => q.category === c).length} MCQs</small>
+  document.getElementById('topics').innerHTML = topics.map((topic, index) => {
+    const count = qs.filter(topic.filter).length;
+
+    return `
+      <div class="topic" onclick="topicQuiz(${index})">
+        <b>${topic.name}</b>
+        <small>${count} MCQs</small>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('latest').innerHTML = qs.slice(-5).reverse().map(q =>
+    `<div class="mcq">
+      <span class="tag">${q.category}</span>
+      <h3>${q.question}</h3>
     </div>`
   ).join('');
-
-  // Latest MCQs
-  document.getElementById('latest').innerHTML =
-    qs.slice(-5).reverse().map(q =>
-      `<div class="mcq">
-        <span class="tag">${q.category}</span>
-        <h3>${q.question}</h3>
-      </div>`
-    ).join('');
 }
-function topicQuiz(c) {
-  quiz = qs.filter(q => q.category === c);
+
+
+function topicQuiz(index) {
+
+  if (index === 0) {
+    quiz = seed.filter(q => q.category === "PNB AGRI PLUS");
+
+  } else if (index === 1) {
+    quiz = seed.filter(q =>
+      q.category === "Ajivika Sahayata Scheme 2026"
+    );
+
+  } else if (index === 2) {
+    // ALL Foreign Exchange questions in one quiz
+    quiz = forexMCQs.map(q => ({
+      ...q,
+      correct: q.answer
+    }));
+  }
+
   begin();
 }
 function startQuiz() {
